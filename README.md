@@ -27,23 +27,21 @@ OpenAI互換 — おてもとLLM / OpenAI / Gemini（OpenAI互換エンドポイ
 
 🚀 使い方
 
-1. サーバーで開く（推奨）
+このアプリはローカルサーバー経由で起動する必要があります。HTMLファイルをブラウザで直接開いても（file://）動きません。
 
-おてもとLLM以外のプロバイダや、署名付きリクエストを使う場合はローカルサーバー経由での起動を推奨します。同梱の start-local-server.bat（Windows / Python 3 が必要）を使うと簡単です。
+起動は簡単で、HTMLファイルと同じフォルダにある start-local-server.bat をダブルクリックするだけです（Windows / Python 3 が必要）。
 
 textstart-local-server.bat をダブルクリック
- → 一覧から番号を選ぶ
- → ブラウザで http://localhost:8000/Vanilla_kamatte_chat.html が開きます
+ → 同じフォルダ内のHTML一覧が番号付きで表示される
+ → 「バニラかまってチャット」の番号を入力して Enter
+ → 自動でブラウザが開き、http://localhost:8000/Vanilla_kamatte_chat.html が起動します
 
-Python が入っていれば、手動でも起動できます。
+start-local-server.bat は、HTMLファイルと同じフォルダに置いてください。停止するときは、起動したコマンドプロンプトの画面で Ctrl + C を押します。
 
-bash# HTMLファイルがあるフォルダで実行
-python -m http.server 8000
-# → http://localhost:8000/Vanilla_kamatte_chat.html を開く
 
-2. ファイルを直接開く
+💡 Python が入っていない場合は、bat実行時にインストール案内が表示されます。python.org からインストールし、その際 「Add python.exe to PATH」にチェックを入れてください（Microsoft Store版ではなく python.org 版を推奨）。
 
-Vanilla_kamatte_chat.html をブラウザにドラッグ＆ドロップしても動きます（file://）。ただし、ブラウザによっては設定の保存やAPI接続（CORS）に制限が出ることがあります。
+
 
 
 ⚙️ 接続設定
@@ -97,7 +95,8 @@ AIへの出力ルールは次のとおりです。
 
 
 モダンブラウザ（ストリーミング応答の読み取りに対応したもの）
-ローカルサーバー起動には Python 3（start-local-server.bat 利用時）
+Python 3（start-local-server.bat でローカルサーバーを起動するために必要）
+Windows（同梱の起動バッチを使う場合）
 
 
 
